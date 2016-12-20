@@ -1,48 +1,34 @@
 {
   "name": "social-share-buttons",
+  "main": "social-share-buttons.html",
   "version": "1.0.0",
   "authors": [
-    "S. Francis"
+    "S. Francis",
+    "Klaus Nielsen"
   ],
-  "description":"social share buttons web component",
+  "description": "social share buttons web component",
   "keywords": [
     "web-component",
     "polymer",
     "social buttons"
   ],
-  "main": "social-share-buttons.html",
-  "license": "MIT",
-  "homepage": "https://github.com/EllipticalElements/social-share-buttons/",
+  "homepage": "https://github.com/kriss-kross-io/social-share-buttons/",
   "ignore": [
     "/.*",
     "/test/",
     "/demo/",
     ".gitignore",
-    ".npmignore",
-    "gulpfile.js",
-    "lib",
-    "docs",
-    "index.js",
-    "umd.js",
     "package.json",
-    "demo",
-    "build.json",
-    "bundle.json",
-    ".nvmrc",
-    ".eslintrc",
-    "bin",
-    "CHANGELOG.md",
-    "demos",
-    "stylesheets",
-    "_index.scss",
-    "bk"
+    ".nvmrc"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
+    "polymer": "polymer/polymer#^1.4.0",
     "elliptical-polymer-behaviors": "~1.2.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "*"
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   }
 }

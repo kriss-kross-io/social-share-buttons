@@ -1,7 +1,11 @@
 <link rel="import" href="../polymer/polymer.html">
+
 <link rel="import" href="../elliptical-polymer-behaviors/component-behavior.html">
 
 <dom-module id="social-share-buttons">
+
+  <template>
+
     <style>
         :host{
             display:-webkit-flex;
@@ -24,7 +28,7 @@
         :host ::content>.linkedin{
             color:#346da6;
         }
-        :host ::content>.goole{
+        :host ::content>.google{
             color:#ca4738;
         }
         :host ::content>.twitter{
@@ -37,14 +41,16 @@
             color:#ca4738;
         }
     </style>
-    <template>
-        <content></content>
-    </template>
-</dom-module>
-<script>
+
+    <content></content>
+
+  </template>
+
+  <script>
     Polymer({
+
         is: 'social-share-buttons',
-        behaviors: [Elliptical.ComponentBehavior],
+
         properties: {
             title: {
                 type: String,
@@ -67,6 +73,8 @@
                 value:null
             }
         },
+
+        behaviors: [Elliptical.ComponentBehavior],
 
         ready: function () {
             this._setIconMargin();
@@ -149,6 +157,8 @@
         _launchWindow: function (url) {
             window.open(url);
         }
-    });
 
+    });
 </script>
+
+</dom-module>
