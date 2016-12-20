@@ -16,7 +16,6 @@
   "ignore": [
     "/.*",
     "/test/",
-    "/demo/",
     ".gitignore",
     "package.json",
     ".nvmrc"
