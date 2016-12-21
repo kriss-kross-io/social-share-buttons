@@ -10,8 +10,10 @@
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
     <link rel="import" href="../../paper-styles/demo-pages.html">
+    <link rel="import" href="../../iron-icon/iron-icon.html">
 
     <link rel="import" href="../social-share-buttons.html">
+    <link rel="import" href="../social-share-icons.html">
 
     <style>
       a {
@@ -32,10 +34,24 @@
               media="https://getmdl.io/templates/blog/images/road_big.jpg"
               url="https://github.com/kriss-kross-io/demo-content"
               title="On the road again">
-            <span class="facebook" data-id="facebook">Facebook</span>
-            <span class="twitter" data-id="twitter">Twitter</span>
-            <span class="linkedin" data-id="linkedin">LinkedIn</span>
+            <iron-icon class="twitter" data-id="twitter" icon="social-share:twitter"></iron-icon>
+            <iron-icon class="facebook" data-id="facebook" icon="social-share:facebook"></iron-icon>
+            <iron-icon class="google" data-id="google" icon="social-share:googleplus"></iron-icon>
+            <iron-icon class="linkedin" data-id="linkedin" icon="social-share:linkedin"></iron-icon>
+          </social-share-button>
+
+        </div>
+
+        <div class="horizontal-section">
+
+          <social-share-buttons
+              media="https://getmdl.io/templates/blog/images/road_big.jpg"
+              url="https://github.com/kriss-kross-io/demo-content"
+              title="On the road again">
+            <span class="twitter" data-id="twitter">twitter</span>
+            <span class="facebook" data-id="facebook">facebook</span>
             <span class="google" data-id="google">Google+</span>
+            <span class="linkedin" data-id="linkedin">LinkedIn</span>
           </social-share-button>
 
         </div>

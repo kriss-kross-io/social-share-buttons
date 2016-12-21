@@ -1,7 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
 
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
-
 <link rel="import" href="../elliptical-polymer-behaviors/component-behavior.html">
 
 <dom-module id="social-share-buttons">
@@ -11,25 +9,21 @@
     <style>
       :host {
         display: block;
-        width:100%;
       }
-      :host ::content > span {
-        cursor:pointer !important;
+      :host ::content > * {
+        cursor: pointer;
       }
-      :host ::content > .linkedin {
+      :host ::content .linkedin {
         color: #346da6;
       }
-      :host ::content > .google {
+      :host ::content .google {
         color: #ca4738;
       }
-      :host ::content > .twitter {
+      :host ::content .twitter {
         color: #1da1f2;
       }
-      :host ::content > .facebook {
+      :host ::content .facebook {
         color: #346da6 !important;
-      }
-      :host ::content > .pinterest {
-        color: #ca4738;
       }
     </style>
 
@@ -54,14 +48,6 @@
           media: {
             type: String,
             value: ''
-          },
-          iconMargin: {
-            type: String,
-            value: null
-          },
-          iconColor: {
-            type: String,
-            value: null
           }
         },
 
@@ -70,36 +56,19 @@
         ],
 
         ready: function() {
-          this._setIconMargin();
-          this._setIconColor();
           var click = this._data.click;
           this._event(this.element, click, '[data-id]', this._onClick.bind(this));
         },
-        
-        _setIconMargin: function() {
-          if (!this.iconMargin) return;
-          var span=this.element.find('span');
-          span.css({'marginRight':this.iconMargin});
-        },
-
-         _setIconColor: function() {
-          if (!this.iconColor) return;
-          var span=this.element.find('span');
-          span.css({'color':this.iconColor});
-        },
 
         _onClick: function(event) {
-          var target = $(event.target);
-          var id = target.attr('data-id');
+          var target = event.target;
+          var id = target.dataset.id;
           switch (id) {
             case 'twitter':
               this._twitter(target);
               break;
             case 'facebook':
               this._facebook(target);
-              break;
-            case 'pinterest':
-              this._pinterest(target);
               break;
             case 'google':
               this._google(target);
@@ -121,14 +90,6 @@
           var url = encodeURI(this.url);
           var text = encodeURI(this.title);
           var URL = 'https://www.facebook.com/share.php?u=' + url + '&title=' + text;
-          this._launchWindow(URL);
-        },
-
-        _pinterest: function(target) {
-          var url = encodeURI(this.url);
-          var text = encodeURI(this.title);
-          var media = encodeURI(this.media);
-          var URL = 'https://pinterest.com/pin/create/bookmarklet/?media=' + media + '&url=' + url + '&is_video=false&description=' + text;
           this._launchWindow(URL);
         },
 

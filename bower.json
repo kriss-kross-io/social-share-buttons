@@ -22,7 +22,8 @@
   ],
   "dependencies": {
     "polymer": "polymer/polymer#^1.4.0",
-    "elliptical-polymer-behaviors": "~1.2.1"
+    "elliptical-polymer-behaviors": "~1.2.1",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^1.1.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
