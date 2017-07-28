@@ -1,18 +1,14 @@
 # \<social-share-buttons\>
 
-
 ## Installation
 
 ``` bash
-
 bower install social-share-buttons --save
-
 ```
 
 ## Usage
 
 ```html
-
 <link rel="import" href="bower_components/social-share-buttons/social-share-buttons.html">
 
 <social-share-buttons media="https://my-domain.com/images/my-image.jpg" url="https://my-domain.com/product/detail/my-sku" title="Product Name">
@@ -22,37 +18,35 @@ bower install social-share-buttons --save
 </social-share-buttons>
 ```
 
-## Install the Polymer-CLI
+## Setup
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+### Prerequisites
 
-## Viewing Your Application
+Install [npm](https://www.npmjs.com/) (or install [Node](https://nodejs.org/en/download/)):
 
-```
-$ polymer serve
-```
-
-## Building Your Application
-
-```
-$ polymer build
+``` bash
+curl -L https://www.npmjs.com/install.sh | sh
 ```
 
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
+Install [bower](https://bower.io/):
 
-You can serve the built versions by giving `polymer serve` a folder to serve
-from:
-
-```
-$ polymer serve build/bundled
+``` bash
+npm install -g bower
 ```
 
-## Running Tests
+### Tools
 
-```
-$ polymer test
+Install [polymer-cli](https://github.com/Polymer/polymer-cli):
+
+``` bash
+npm install -g polymer-cli
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+### Start the development server
+
+This command serves the app at `http://localhost:8080/components/social-share-buttons/` and provides basic URL
+routing for the app:
+
+``` bash
+polymer serve
+```
